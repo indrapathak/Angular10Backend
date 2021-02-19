@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"RCPMS.nodeData"}],"uuid":"929ef678d50c4e1e9a1ca7511469b4a5"}
