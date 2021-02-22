@@ -24,13 +24,13 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 //install mongoose
 var mongoose = require('mongoose');
-console.log("mongo URL ", config.database.mongoURL)
+console.log("MONGODB_URI ", config.database.MONGODB_URI)
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useCreateIndex', true)
 
 
-mongoose.connect(config.database.mongoURL, { useNewUrlParser:  true});
+mongoose.connect(config.database.MONGODB_URI, { useNewUrlParser:  true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {

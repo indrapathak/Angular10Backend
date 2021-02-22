@@ -85,6 +85,7 @@ async function updateUser(req, res) {
 }
 
 async function projectStart(req, res) {
+    console.log("wr are inside project start function")
     try {
         res.status(200).send(
             "The Angular 10 Project Backend Is Running"
