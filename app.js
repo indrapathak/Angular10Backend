@@ -42,8 +42,21 @@ db.once('open', function () {
 
 
 const localIP = 'localhost';
+// app.use(function (req, res, next) {
+//     res.setHeader('Access-Control-Allow-Origin', 'http://' + localIP + ':4200');
+//     //res.setHeader('Access-Control-Allow-Origin', 'http://'+localIP+':3000, http://localhost')
+//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+//     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Accept');
+//     res.setHeader('Access-Control-Allow-Credentials', true);
+//     if ('OPTIONS' == req.method) {
+//         return res.sendStatus(200);
+//     } else {
+//         next();
+//     }
+// });
+
 app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'http://' + localIP + ':4200');
+    res.setHeader('Access-Control-Allow-Origin', 'https://angular-10-project.herokuapp.com/');
     //res.setHeader('Access-Control-Allow-Origin', 'http://'+localIP+':3000, http://localhost')
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Accept');
